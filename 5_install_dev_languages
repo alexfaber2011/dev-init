@@ -1,9 +1,12 @@
 #! /bin/bash
 
 # Install Node via n
-curl -L https://raw.githubusercontent.com/tj/n/master/bin/n -o n
-echo $N_PREFIX
-fish "set -Ux N_PREFIX $HOME/n/"
-bash n lts
-npm install -g n
+if [[ -z $(which n) ]]; then
+  curl -L https://git.io/n-install | bash
+  printf "\n\nrun '. ~/.config/fish/config.fish' and then fire script up again"
+  exit 0
+fi
+
+# Install Global node packages
 npm install -g typescript
+npm install -g yarn

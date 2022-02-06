@@ -1,0 +1,5 @@
+#! /bin/bash
+
+sudo apt install fish
+chsh -s $(which fish)
+printf "\n\nlog out and back in again"

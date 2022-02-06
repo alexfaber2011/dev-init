@@ -1,0 +1,12 @@
+#! /bin/bash
+
+apt update
+apt upgrade
+apt install \
+    vim-gtk \
+    tmux \
+    git \
+    build-essential \
+
+# Configure tmux
+echo "set -g default-terminal \"screen-256color\"" > ~/.tmux.conf

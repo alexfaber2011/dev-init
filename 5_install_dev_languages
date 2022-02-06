@@ -1,0 +1,9 @@
+#! /bin/bash
+
+# Install Node via n
+curl -L https://raw.githubusercontent.com/tj/n/master/bin/n -o n
+echo $N_PREFIX
+fish "set -Ux N_PREFIX $HOME/n/"
+bash n lts
+npm install -g n
+npm install -g typescript

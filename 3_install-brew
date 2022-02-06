@@ -6,3 +6,6 @@ eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 echo 'eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)' \
   >> ~/.config/fish/config.fish
 brew install gcc
+brew install fzf
+# Install fuzzy-completion
+~/linuxbrew/.linuxbrew/opt/fzf/install

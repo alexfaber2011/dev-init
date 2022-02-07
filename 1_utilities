@@ -9,4 +9,4 @@ apt install \
     build-essential \
 
 # Configure tmux
-echo "set -g default-terminal \"screen-256color\"" > ~/.tmux.conf
+echo "set -g default-terminal \"screen-256color\"\nset -g mouse on" > ~/.tmux.conf

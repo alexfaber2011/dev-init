@@ -7,6 +7,14 @@ apt install \
     tmux \
     git \
     build-essential \
+    htop \
 
 # Configure tmux
-echo "set -g default-terminal \"screen-256color\"\nset -g mouse on" > ~/.tmux.conf
+echo "set -g default-terminal \"screen-256color\"\nset -g mouse on\nbind c new-window -c \"#{pane_current_path}\" " > ~/.tmux.conf
+cat << EOF > ~/.tmux.conf
+set -g default-terminal "screen-256color"
+set -g mouse on
+bind c new-window        -c "#{pane_current_path}"
+bind '"' split-window -v -c "#{pane_current_path}"
+bind % split-window -h   -c "#{pane_current_path}"
+EOF

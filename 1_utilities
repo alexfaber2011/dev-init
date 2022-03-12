@@ -8,6 +8,7 @@ apt install \
     git \
     build-essential \
     htop \
+    mosh \
 
 # Configure tmux
 echo "set -g default-terminal \"screen-256color\"\nset -g mouse on\nbind c new-window -c \"#{pane_current_path}\" " > ~/.tmux.conf
